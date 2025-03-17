@@ -1,50 +1,68 @@
-# Welcome to your Expo app 👋
+# Hướng Dẫn Clone và Chạy Dự Án Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Yêu Cầu Môi Trường
 
-## Get started
+Để chạy được dự án, cần đảm bảo môi trường phát triển có các yêu cầu sau:
 
-1. Install dependencies
+- **Node.js** phiên bản **v22.12.0**
+- **Git** để clone repository
+- **Expo CLI** và **EAS CLI**
+- **Thiết bị Android hoặc trình giả lập**
 
-   ```bash
-   npm install
-   ```
+## Hướng Dẫn Cài Đặt
 
-2. Start the app
+### 1. Clone repository
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```sh
+git clone <repository-url>
+cd <project-folder>
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Cài đặt các dependencies
 
-## Learn more
+```sh
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Cài đặt EAS CLI (nếu chưa có)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```sh
+npm install -g eas-cli
+```
 
-## Join the community
+### 4. Đăng nhập vào Expo
 
-Join our community of developers creating universal apps.
+- Nếu chưa có tài khoản, đăng ký tại: [Expo Sign Up](https://expo.dev/signup)
+- Đăng nhập bằng lệnh:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```sh
+eas login
+```
+
+### 5. Cấu hình EAS cho dự án (chạy lệnh trong terminal dự án)
+
+```sh
+eas build:configure
+```
+
+### 6. Tạo bản build phát triển
+
+```sh
+eas build --platform android --profile development
+```
+
+### 7. Cài đặt bản build trên thiết bị
+
+- Sau khi build hoàn tất, quét mã QR trong terminal hoặc mở link trên thiết bị.
+- Nhấn **Install** để tải về và **Open** để cài đặt.
+
+## Lưu Ý
+
+- Nếu gặp lỗi liên quan đến quyền truy cập, kiểm tra xem bạn đã đăng nhập đúng tài khoản Expo chưa.
+- Nếu build thất bại, thử chạy `eas build:inspect` để kiểm tra lỗi chi tiết.
+- Nếu dùng thiết bị thật, bật **Developer Mode** và **USB Debugging** trong cài đặt điện thoại.
+
+## Liên Hệ Hỗ Trợ
+
+Nếu có bất kỳ vấn đề gì, liên hệ với nhóm phát triển hoặc kiểm tra tài liệu tại: 
+[Expo Docs](https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-build).# my-app
