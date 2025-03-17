@@ -23,46 +23,22 @@ cd <project-folder>
 ```sh
 npm install
 ```
+### 3. Truy cập link trên smart phone hoặc máy ảo mobile gòi tải file về và cài đặt như cài đặt app bình thường:
+https://expo.dev/accounts/huynhanh/projects/my-app/builds/9d7088d9-260f-44db-ac73-ce05e78698bf
+hoặc quét mã QR:
+![img.png](img.png)
 
-### 3. Cài đặt EAS CLI (nếu chưa có)
-
-```sh
-npm install -g eas-cli
-```
-
-### 4. Đăng nhập vào Expo
-
-- Nếu chưa có tài khoản, đăng ký tại: [Expo Sign Up](https://expo.dev/signup)
-- Đăng nhập bằng lệnh:
+### 4. Sau đó chạy lệnh: 
 
 ```sh
-eas login
+    npm start
 ```
 
-### 5. Cấu hình EAS cho dự án (chạy lệnh trong terminal dự án)
+### 5. Sau khi chạy được dự án thành công thì vào file trong dự án: 
+app/(tabs)/index.tsx
+Tìm chỗ "Wellcom Huynh Anh!" sữa lại thành tên các bạn sao đó nhấn Ctrl + S và xem trên giao diện có được cập nhật lại không.
 
-```sh
-eas build:configure
-```
+### 6. Nếu phát sinh lỗi thì liên hệ: Huỳnh Vũ Khang để được hưỡng dẫn tận tâm tình luôn!
 
-### 6. Tạo bản build phát triển
 
-```sh
-eas build --platform android --profile development
-```
 
-### 7. Cài đặt bản build trên thiết bị
-
-- Sau khi build hoàn tất, quét mã QR trong terminal hoặc mở link trên thiết bị.
-- Nhấn **Install** để tải về và **Open** để cài đặt.
-
-## Lưu Ý
-
-- Nếu gặp lỗi liên quan đến quyền truy cập, kiểm tra xem bạn đã đăng nhập đúng tài khoản Expo chưa.
-- Nếu build thất bại, thử chạy `eas build:inspect` để kiểm tra lỗi chi tiết.
-- Nếu dùng thiết bị thật, bật **Developer Mode** và **USB Debugging** trong cài đặt điện thoại.
-
-## Liên Hệ Hỗ Trợ
-
-Nếu có bất kỳ vấn đề gì, liên hệ với nhóm phát triển hoặc kiểm tra tài liệu tại: 
-[Expo Docs](https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-build).# my-app
